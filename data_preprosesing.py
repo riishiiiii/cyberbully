@@ -108,9 +108,9 @@ def custom_input_prediction(text):
     text = [text[0],]
 
     # to use this function we will need to define vectoriser first 
-    vectoriser = pickle.load(open("model/vectoriser.sav", "rb"))
+    vectoriser = pickle.load(open("vectoriser.sav", "rb"))
     text = vectoriser.transform(text)
-    model = pickle.load(open("model/finalized_model.sav", "rb"))
+    model = pickle.load(open("finalized_model.sav", "rb"))
     prediction = model.predict(text)
     prediction = prediction[0]
 
