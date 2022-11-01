@@ -3,6 +3,7 @@ import re
 import pickle
 from nltk.tokenize import RegexpTokenizer
 from nltk import PorterStemmer, WordNetLemmatizer
+import nltk
 nltk.download('wordnet')
 
 # preprocessing functions
