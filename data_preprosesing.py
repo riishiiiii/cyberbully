@@ -3,7 +3,7 @@ import re
 import pickle
 from nltk.tokenize import RegexpTokenizer
 from nltk import PorterStemmer, WordNetLemmatizer
-
+nltk.download('wordnet')
 
 # preprocessing functions
 
@@ -100,6 +100,8 @@ def preprocess(text):
 
 # Function for custom input prediction
 def custom_input_prediction(text):
+    import nltk
+    nltk.download('omw-1.4')
     text = pd.Series(text)
     text = preprocess(text)
     text = [text[0],]
